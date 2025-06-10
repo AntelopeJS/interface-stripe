@@ -3,7 +3,7 @@
 # Interface Stripe
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.md)
-[![Version](https://img.shields.io/badge/version-beta-orange.svg)](https://github.com/antelopejs/antelope)
+[![Version](https://img.shields.io/badge/version-beta-orange.svg)](https://github.com/AntelopeJS/stripe/tree/main/.antelope/output/stripe/beta)
 
 A structured framework for integrating Stripe payment processing capabilities into your AntelopeJS applications. Interface Stripe offers a clean, simple API for creating payment intents, monitoring payment status changes, and processing webhooks.
 
