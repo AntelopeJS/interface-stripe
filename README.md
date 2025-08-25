@@ -32,7 +32,7 @@ This is the development version (`beta`) of the Interface Stripe. It is currentl
 
 | Version | Link                                                                                       | Status                                        |
 | ------- | ------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| beta    | [stripe@beta](https://github.com/AntelopeJS/stripe/tree/main/.antelope/output/stripe/beta) | Waiting validation from community to go in v1 |
+| beta    | [stripe@beta](https://github.com/AntelopeJS/stripe/tree/main/output/stripe/beta) | Waiting validation from community to go in v1 |
 | 1       | _Not yet released_                                                                         | Planned stable release                        |
 
 ## License
