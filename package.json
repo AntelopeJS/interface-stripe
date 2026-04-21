@@ -35,7 +35,7 @@
     "release": "pnpm run lint && pnpm run prepack && release-it"
   },
   "dependencies": {
-    "@antelopejs/interface-core": "^0.0.2",
+    "@antelopejs/interface-core": "^0.0.3",
     "stripe": "^18.5.0"
   },
   "devDependencies": {
