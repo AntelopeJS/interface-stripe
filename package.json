@@ -24,18 +24,7 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
-    },
     "./package.json": "./package.json"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "dist/*.d.ts"
-      ]
-    }
   },
   "scripts": {
     "build": "rimraf dist && tsc",
@@ -46,7 +35,7 @@
     "release": "pnpm run lint && pnpm run prepack && release-it"
   },
   "dependencies": {
-    "@antelopejs/interface-core": "^0.0.2",
+    "@antelopejs/interface-core": "^0.0.3",
     "stripe": "^18.5.0"
   },
   "devDependencies": {
@@ -59,5 +48,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "antelopeJs": {}
 }
