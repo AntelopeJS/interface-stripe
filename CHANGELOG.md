@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/AntelopeJS/interface-stripe/compare/v0.0.2...v0.0.3)
+
+### 📖 Documentation
+
+- Rewrite documentation for production readiness ([0d89d32](https://github.com/AntelopeJS/interface-stripe/commit/0d89d32))
+
+### 🏡 Chore
+
+- Update package.json ([5632b3e](https://github.com/AntelopeJS/interface-stripe/commit/5632b3e))
+- Update dependencies ([dbae7c8](https://github.com/AntelopeJS/interface-stripe/commit/dbae7c8))
+- Package maintenance ([#3](https://github.com/AntelopeJS/interface-stripe/pull/3))
+
+### ❤️ Contributors
+
+- Antony Rizzitelli <upd4ting@gmail.com>
+
 ## v0.0.2
 
 
