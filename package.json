@@ -1,6 +1,6 @@
 {
   "name": "@antelopejs/interface-stripe",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "AntelopeJS interface for Stripe payment integration",
   "keywords": [
     "antelopejs",
