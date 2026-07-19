@@ -47,9 +47,15 @@ WatchPayment(intent.id, (payloadId, intent, context) => {
   // payloadId === intent.metadata.payload (the id given to InitializePayment)
 });
 
+// Filter at registration: only local events reach the callback
+WatchAllPayments((payloadId, intent, context) => {
+  // context.local is always true here
+}, /* onlyLocal */ true);
+
+// …or filter manually inside the callback
 WatchAllPayments((payloadId, intent, context) => {
   if (!context.local) return; // event came from another cluster instance
-}, /* onlyLocal */ true); // or filter at registration
+});
 ```
 
 Escape hatch for anything the helpers don't cover:
