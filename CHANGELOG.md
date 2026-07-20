@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/AntelopeJS/interface-stripe/compare/v0.0.4...v0.0.5)
+
+### 🚀 Enhancements
+
+- **skills:** Ship a consumer skill with the package ([#5](https://github.com/AntelopeJS/interface-stripe/pull/5))
+
+### ❤️ Contributors
+
+- Antony Rizzitelli <upd4ting@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/AntelopeJS/interface-stripe/compare/v0.0.3...v0.0.4)
