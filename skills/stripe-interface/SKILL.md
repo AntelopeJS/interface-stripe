@@ -30,9 +30,9 @@ import type Stripe from "stripe"; // for PaymentIntent, Source, etc.
 
 ```ts
 // Create a payment intent linked to your own id (stored in metadata.payload)
-const intent = await InitializePayment("order_123", {
-  amount: 2500, // smallest currency unit
-  currency: "usd",
+const intent = await InitializePayment("library-fine-8842", {
+  amount: 450, // smallest currency unit
+  currency: "eur",
   payment_method_types: ["card"],
 });
 
