@@ -5,28 +5,31 @@
   "keywords": [
     "antelopejs",
     "interface",
-    "stripe",
-    "payment"
+    "payment",
+    "stripe"
   ],
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AntelopeJS/interface-stripe.git"
   },
-  "license": "Apache-2.0",
-  "packageManager": "pnpm@10.6.5",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "docs",
     "skills"
   ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "rimraf dist && tsc",
@@ -58,10 +61,7 @@
   "peerDependencies": {
     "@antelopejs/interface-core": ">=0.0.3 <1.0.0"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
+  "packageManager": "pnpm@10.6.5",
   "antelopeJs": {
     "skills": [
       "./skills"
