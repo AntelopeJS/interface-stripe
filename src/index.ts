@@ -1,5 +1,5 @@
-import { EventProxy } from "@antelopejs/interface-core";
 import type Stripe from "stripe";
+import { EventProxy } from "@antelopejs/interface-core";
 
 /**
  * Context information for payment intent change events

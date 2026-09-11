@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## v0.0.5
 
 [compare changes](https://github.com/AntelopeJS/interface-stripe/compare/v0.0.4...v0.0.5)
@@ -37,7 +36,6 @@
 
 ## v0.0.2
 
-
 ### 🚀 Enhancements
 
 - Add Stripe interface implementation ([f2a413e](https://github.com/AntelopeJS/interface-stripe/commit/f2a413e))
@@ -60,4 +58,3 @@
 
 - Antony Rizzitelli <upd4ting@gmail.com>
 - Glastis ([@Glastis](http://github.com/Glastis))
-
