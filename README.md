@@ -1,5 +1,3 @@
-![Stripe](.github/social-card.png)
-
 # Interface Stripe
 
 <div align="center">
