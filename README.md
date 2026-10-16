@@ -4,7 +4,7 @@
 <a href="https://www.npmjs.com/package/@antelopejs/interface-stripe"><img alt="npm" src="https://img.shields.io/npm/v/@antelopejs/interface-stripe?style=for-the-badge&labelColor=000000&color=000000"></a>
 <a href="./LICENSE"><img alt="License" src="https://img.shields.io/npm/l/@antelopejs/interface-stripe?style=for-the-badge&labelColor=000000&color=000000"></a>
 <a href="https://discord.gg/sjK28QHrA7"><img alt="Discord" src="https://img.shields.io/badge/Discord-18181B?logo=discord&style=for-the-badge&color=000000"></a>
-<a href="https://interfaces.antelopejs.com/docs/stripe"><img alt="Docs" src="https://img.shields.io/badge/Docs-18181B?style=for-the-badge&color=000000"></a>
+<a href="./docs/1.introduction.md"><img alt="Docs" src="https://img.shields.io/badge/Docs-18181B?style=for-the-badge&color=000000"></a>
 </div>
 
 Stripe payments for AntelopeJS: create payment intents tied to your own records, and react when Stripe reports that they succeed or fail.
@@ -54,27 +54,44 @@ export async function startCheckout(orderId: string, amountInCents: number) {
 }
 
 WatchAllPayments((orderId, intent, context) => {
-  if (context.local && intent.status === "succeeded") {
+  if (orderId && context.local && intent.status === "succeeded") {
     markOrderPaid(orderId);
   }
 });
 ```
 
-`orderId` is the identifier passed to `InitializePayment`. `markOrderPaid` stands for your own code.
+`orderId` is the identifier passed to `InitializePayment`. Return the client secret
+to the authenticated payer before waiting for completion, so Stripe.js can confirm
+the payment. `markOrderPaid` stands for your own idempotent order update; handle
+webhook redelivery even when `context.local` is true. Configure the implementation's
+Stripe credentials and webhook endpoint before using these functions.
 
 ## Documentation
 
-- [Introduction](https://interfaces.antelopejs.com/docs/stripe/introduction)
-- [Payment processing](https://interfaces.antelopejs.com/docs/stripe/payment-processing)
-- [Event monitoring](https://interfaces.antelopejs.com/docs/stripe/event-monitoring)
+- [Introduction](./docs/1.introduction.md)
+- [Payment processing](./docs/2.payment-processing.md)
+- [Event monitoring](./docs/3.event-monitoring.md)
 
 ## Compatibility
 
-| Package                             | Range            |
-| ----------------------------------- | ---------------- |
-| `@antelopejs/interface-core` (peer) | `>=0.0.3 <1.0.0` |
-| `stripe` SDK (dependency)           | `^18.5.0`        |
-| `@antelopejs/core`                  | `1.x`            |
+Peer requirement:
+
+<!-- docs-compat: ./package.json#peerDependencies -->
+
+| Package                      | Range            |
+| ---------------------------- | ---------------- |
+| `@antelopejs/interface-core` | `>=0.0.3 <1.0.0` |
+
+Runtime dependency:
+
+<!-- docs-compat: ./package.json#dependencies -->
+
+| Package  | Range     |
+| -------- | --------- |
+| `stripe` | `^18.5.0` |
+
+These are the runtime ranges in `package.json`. This package does not declare an
+`@antelopejs/core` peer range; check the implementing module's requirements too.
 
 ## Contributing
 

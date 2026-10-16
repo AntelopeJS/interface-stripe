@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": false,
+    "incremental": false,
+    "rootDir": "..",
+    "baseUrl": "..",
+    "paths": {
+      "@antelopejs/interface-stripe": ["src/index.ts"]
+    }
+  },
+  "include": ["../src", "./**/*.ts"]
+}
