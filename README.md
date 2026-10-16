@@ -80,7 +80,7 @@ Peer requirement:
 
 | Package                      | Range            |
 | ---------------------------- | ---------------- |
-| `@antelopejs/interface-core` | `>=0.0.3 <1.0.0` |
+| `@antelopejs/interface-core` | `>=0.2.4 <1.0.0` |
 
 Runtime dependency:
 
