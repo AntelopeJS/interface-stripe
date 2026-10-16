@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" role="img" aria-labelledby="title desc">
+  <title id="title">Checkout and reconciliation are separate paths</title>
+  <desc id="desc">The server creates an intent and saves its order association, then returns the client secret so the browser can confirm with Stripe.js. Verified provider events and server reconciliation drive idempotent order updates. Watchers are in memory.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#627d98"/></marker></defs>
+  <rect width="800" height="430" rx="16" fill="#f4f7fb"/>
+  <g font-family="system-ui, sans-serif" fill="#17324d">
+    <text x="28" y="38" font-size="22" font-weight="700">Return the secret before waiting for payment</text>
+    <text x="28" y="73" font-size="14" font-weight="600">CHECKOUT REQUEST</text>
+    <g fill="#e2edf8" stroke="#b0c9e0"><rect x="28" y="91" width="220" height="94" rx="10"/><rect x="294" y="91" width="212" height="94" rx="10"/><rect x="552" y="91" width="220" height="94" rx="10"/></g>
+    <text x="46" y="124" font-size="18" font-weight="700">InitializePayment</text><text x="46" y="152" font-size="15">Save order ↔ intent ID</text>
+    <text x="312" y="124" font-size="16" font-weight="700">Return client secret</text><text x="312" y="152" font-size="15">To authenticated payer</text>
+    <text x="570" y="124" font-size="18" font-weight="700">Browser confirms</text><text x="570" y="152" font-size="15">Stripe.js + payer action</text>
+    <path d="M248 138H282" stroke="#627d98" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M506 138H540" stroke="#627d98" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="28" y="226" font-size="14" font-weight="600">SERVER-OWNED RECONCILIATION</text>
+    <rect x="28" y="244" width="220" height="94" rx="10" fill="#17324d"/><text x="46" y="277" fill="#fff" font-size="18" font-weight="700">Saved intent ID</text><text x="46" y="305" fill="#d5e5f3" font-size="15">Survives process restart</text>
+    <path d="M248 291H282" stroke="#627d98" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="294" y="244" width="212" height="94" rx="10" fill="#e2f3ec" stroke="#91c7ae"/><text x="312" y="277" font-size="18" font-weight="700">Wait / watch</text><text x="312" y="305" font-size="15">Verified provider events</text>
+    <path d="M506 291H540" stroke="#627d98" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="552" y="244" width="220" height="94" rx="10" fill="#e2f3ec" stroke="#91c7ae"/><text x="570" y="277" font-size="18" font-weight="700">Update order</text><text x="570" y="305" font-size="15">Validate + deduplicate</text>
+    <text x="28" y="382" font-size="16">Watchers live in memory. A browser return is not proof of payment.</text><text x="28" y="406" font-size="14">WaitForPayment has no timeout; CompletePayment is a separate Source-based charge flow.</text>
+  </g>
+</svg>
