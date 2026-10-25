@@ -4,9 +4,9 @@ The AntelopeJS contract for Stripe payments, published as `@antelopejs/interface
 
 ## Layout
 
-- The callers' API is the exported functions (`GetClient`, `InitializePayment`, `WaitForPayment`, `CompletePayment`, `WatchAllPayments`, `WatchPayment`) and `IntentChangeContext`. They run in this package and wait on `internal.client`.
+- The callers' API is the exported functions (`GetClient`, `InitializePayment`, `WaitForPayment`, `CompletePayment`, `WatchAllPayments`, `WatchPayment`) and `IntentChangeContext`. The payment functions wait on `internal.client`; the watchers listen on `internal.intentChanges`.
 - The implementation side is the `internal` namespace: the implementing module resolves the client through `internal.SetClient`, resets it with `internal.UnsetClient`, and emits webhook payment-intent changes on the `internal.intentChanges` event proxy. Renaming or retyping any `internal` member breaks `@antelopejs/stripe`.
-- `skills/` and `docs/` ship in the npm package. `docs/` is the source of interfaces.antelopejs.com/docs/stripe; its snippets type-check through `docs/tsconfig.json`, which maps the package name onto `src/index.ts`. When a public contract changes, update the matching doc page and `skills/stripe-interface/SKILL.md`.
+- `skills/` and `docs/` ship in the npm package. `docs/` is the source of interfaces.antelopejs.com/docs/stripe; Markdown fences tagged `ts docs-check` type-check through `docs/tsconfig.json`, which maps the package name onto `src/index.ts`; untagged fences are not checked (one tagged fence today, in `docs/2.payment-processing.md`). When a public contract changes, update the matching doc page and `skills/stripe-interface/SKILL.md`.
 
 ## Versioning
 
@@ -16,8 +16,8 @@ The AntelopeJS contract for Stripe payments, published as `@antelopejs/interface
 ## Checks
 
 - The package has no test suites. `pnpm test` only builds `dist` with `tsc`, so `pnpm run checks` proves the package compiles and emits.
-- `pnpm run checks` does not run the docs check (Markdown links, the README compatibility tables, and the `docs/` snippets type-checked through `docs/tsconfig.json`). Only CI runs it, through the `docs-files` and `docs-typescript-project` inputs of `.github/workflows/ci.yml`. To type-check the snippets locally, run `pnpm exec tsc -p docs/tsconfig.json`.
-- The runtime behaviour (webhooks, watchers, payment completion) is tested in AntelopeJS/stripe, not here.
+- `pnpm run checks` does not run the docs check (Markdown links, the README compatibility tables, and the `ts docs-check` fences). Only CI runs it, through the `docs-files` and `docs-typescript-project` inputs of `.github/workflows/ci.yml`; no local script runs it.
+- Webhook handling is tested in AntelopeJS/stripe. Nothing tests the watcher, `WaitForPayment` or `CompletePayment` logic in `src/index.ts`.
 
 <!-- antelopejs-guardrails:start -->
 <!-- Managed by @antelopejs/tooling-configs. `antelopejs-sync` rewrites everything between these markers; write repository-specific guidance outside them. -->
