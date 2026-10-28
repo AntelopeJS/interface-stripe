@@ -1,7 +1,0 @@
-{
-  "rules": {
-    "antelopejs/no-comments": 2,
-    "anti-slop/no-unknown-parameters": 1
-  },
-  "oversizeFiles": {}
-}

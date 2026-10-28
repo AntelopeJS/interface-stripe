@@ -65,7 +65,7 @@ export async function InitializePayment(
  */
 interface WatchedIntent {
   resolve: (intent: Stripe.PaymentIntent) => void;
-  reject: (error: unknown) => void;
+  reject: (error: Stripe.PaymentIntent["cancellation_reason"]) => void;
 }
 const watchedIntents = new Map<string, WatchedIntent>();
 const watchedIntentPromises = new Map<string, Promise<Stripe.PaymentIntent>>();
