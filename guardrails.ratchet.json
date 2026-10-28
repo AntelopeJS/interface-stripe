@@ -1,6 +1,0 @@
-{
-  "rules": {
-    "anti-slop/no-unknown-parameters": 1
-  },
-  "oversizeFiles": {}
-}
