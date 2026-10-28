@@ -52,14 +52,16 @@
     "ratchet:update": "antelopejs-ratchet --update",
     "sync:check": "antelopejs-sync --check",
     "typecheck": "tsc --noEmit",
-    "test": "pnpm run build"
+    "test": "pnpm run build",
+    "suppressions": "antelopejs-suppressions",
+    "suppressions:update": "antelopejs-suppressions --update"
   },
   "dependencies": {
     "stripe": "^18.5.0"
   },
   "devDependencies": {
     "@antelopejs/interface-core": ">=0.2.4 <1.0.0",
-    "@antelopejs/tooling-configs": "^0.2.0",
+    "@antelopejs/tooling-configs": "^0.2.8",
     "@types/node": "^22.19.15",
     "eslint-plugin-perfectionist": "^5.11.0",
     "knip": "^6.34.0",
