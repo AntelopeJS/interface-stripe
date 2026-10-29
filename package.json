@@ -58,8 +58,9 @@
     "stripe": "^18.5.0"
   },
   "devDependencies": {
+    "@antelopejs/core": "^1.16.0",
     "@antelopejs/interface-core": ">=0.2.4 <1.0.0",
-    "@antelopejs/tooling-configs": "^0.2.8",
+    "@antelopejs/tooling-configs": "^0.2.12",
     "@types/node": "^22.19.15",
     "eslint-plugin-perfectionist": "^5.11.0",
     "knip": "^6.34.0",

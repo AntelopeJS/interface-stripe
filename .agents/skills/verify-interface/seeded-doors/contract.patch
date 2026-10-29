@@ -1,0 +1,13 @@
+diff --git a/src/index.ts b/src/index.ts
+index e2a44fa..e618c7f 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -221,7 +221,7 @@ export function WatchAllPayments(callback: IntentWatcher, onlyLocal?: boolean) {
+  *   }
+  * });
+  */
+-export function WatchPayment(paymentIntentId: string, callback: IntentWatcher) {
++export function WatchIntent(paymentIntentId: string, callback: IntentWatcher) {
+   if (!watchersIntent.has(paymentIntentId)) {
+     watchersIntent.set(paymentIntentId, new Set());
+   }
