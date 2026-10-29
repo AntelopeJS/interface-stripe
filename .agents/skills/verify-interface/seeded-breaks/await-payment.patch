@@ -1,0 +1,13 @@
+diff --git a/src/index.ts b/src/index.ts
+index e2a44fa..ba4e68e 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -89,7 +89,7 @@ export async function WaitForPayment(paymentIntentId: string) {
+   if (paymentIntent.status === "succeeded") {
+     return paymentIntent;
+   } else if (paymentIntent.status === "canceled") {
+-    throw paymentIntent.cancellation_reason;
++    return paymentIntent;
+   }
+ 
+   const existingPromise = watchedIntentPromises.get(paymentIntentId);

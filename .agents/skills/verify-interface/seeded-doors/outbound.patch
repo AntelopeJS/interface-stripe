@@ -1,0 +1,13 @@
+diff --git a/src/index.ts b/src/index.ts
+index e2a44fa..154906e 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -131,7 +131,7 @@ export async function CompletePayment(
+   const charge = await client.charges.create(
+     {
+       source: source.id,
+-      amount: paymentIntent.amount,
++      amount: paymentIntent.amount * 2,
+       currency: paymentIntent.currency,
+       metadata: {
+         paymentIntentId: paymentIntent.id,

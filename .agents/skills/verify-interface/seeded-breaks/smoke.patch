@@ -1,0 +1,13 @@
+diff --git a/src/index.ts b/src/index.ts
+index e2a44fa..1f2a119 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -32,7 +32,7 @@ export namespace internal {
+  * @returns {Promise<Stripe>} A promise that resolves to the Stripe client
+  */
+ export function GetClient(): Promise<Stripe> {
+-  return internal.client;
++  return internal.client.then(() => undefined as never);
+ }
+ 
+ /**

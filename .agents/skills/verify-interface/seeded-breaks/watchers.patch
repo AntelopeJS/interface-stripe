@@ -1,0 +1,13 @@
+diff --git a/src/index.ts b/src/index.ts
+index e2a44fa..5c33690 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -165,7 +165,7 @@ const watchersAll = new Map<IntentWatcher, boolean>();
+ const watchersIntent = new Map<string, Set<IntentWatcher>>();
+ internal.intentChanges.register((intent, context) => {
+   for (const [watcher, requireLocal] of watchersAll.entries()) {
+-    if (!requireLocal || context.local) {
++    if (!requireLocal || !context.local) {
+       watcher(intent.metadata.payload, intent, context);
+     }
+   }
