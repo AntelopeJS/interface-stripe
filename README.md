@@ -76,19 +76,15 @@ Stripe credentials and webhook endpoint before using these functions.
 
 Peer requirement:
 
-<!-- docs-compat: ./package.json#peerDependencies -->
+<!-- antelopejs-docs-compat:start -->
 
-| Package                      | Range            |
-| ---------------------------- | ---------------- |
-| `@antelopejs/interface-core` | `>=0.2.4 <1.0.0` |
+| Package                      | Supported        | Tested with |
+| ---------------------------- | ---------------- | ----------- |
+| `@antelopejs/interface-core` | `>=0.2.4 <1.0.0` | `0.2.4`     |
+
+<!-- antelopejs-docs-compat:end -->
 
 Runtime dependency:
-
-<!-- docs-compat: ./package.json#dependencies -->
-
-| Package  | Range     |
-| -------- | --------- |
-| `stripe` | `^18.5.0` |
 
 These are the runtime ranges in `package.json`. This package does not declare an
 `@antelopejs/core` peer range; check the implementing module's requirements too.
