@@ -9,6 +9,8 @@
 
 The AntelopeJS interface for Stripe payments. You create payment intents tied to your own records, and your code reacts when Stripe reports that they succeed or fail.
 
+Part of [AntelopeJS](https://github.com/AntelopeJS/antelopejs), the TypeScript framework where modules depend on contracts and the application chooses the provider. Built by the team behind [AntelopeJS DMS](https://github.com/AntelopeJS/dms).
+
 ## What it offers
 
 - `GetClient()` resolves to the project's configured [Stripe SDK](https://github.com/stripe/stripe-node) client.
