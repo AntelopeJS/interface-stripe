@@ -80,6 +80,9 @@
   "antelopeJs": {
     "skills": [
       "./skills"
-    ]
+    ],
+    "docs": {
+      "standard": true
+    }
   }
 }
