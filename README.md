@@ -44,6 +44,8 @@ import {
   WatchAllPayments,
 } from "@antelopejs/interface-stripe";
 
+declare function markOrderPaid(orderId: string): void;
+
 export async function startCheckout(orderId: string, amountInCents: number) {
   const intent = await InitializePayment(orderId, {
     amount: amountInCents,
@@ -62,7 +64,7 @@ WatchAllPayments((orderId, intent, context) => {
 
 `orderId` is the identifier passed to `InitializePayment`. Return the client secret
 to the authenticated payer before waiting for completion, so Stripe.js can confirm
-the payment. `markOrderPaid` stands for your own idempotent order update; handle
+the payment. `markOrderPaid` stands for your own idempotent order update, and its `declare` line only gives it a type; handle
 webhook redelivery even when `context.local` is true. Configure the implementation's
 Stripe credentials and webhook endpoint before using these functions.
 
