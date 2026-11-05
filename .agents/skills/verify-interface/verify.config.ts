@@ -188,20 +188,17 @@ const config: VerifyConfig<typeof StripeInterface> = {
     contract: {
       globs: ["src/index.ts", "package.json"],
       funnels: [],
-      containments: [],
       why: "the six functions and IntentChangeContext are what every payment flow imports",
     },
     outbound: {
       globs: ["src/index.ts"],
       funnels: [],
-      containments: [],
       why: "CompletePayment creates a Stripe charge and InitializePayment creates a payment intent; the amount, currency and idempotency key leave this file for Stripe",
     },
     exposure: null,
     publish: {
       globs: ["package.json", ".release-it.json", "changelogen.config.json", ".github/workflows/release.yml"],
       funnels: [],
-      containments: [],
       why: "the package name and release workflow claim @antelopejs/interface-stripe on npm",
     },
   },

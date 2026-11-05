@@ -2,6 +2,7 @@
   "rules": {},
   "tsExpectError": 0,
   "tsIgnore": 0,
-  "safety": 0,
-  "config": {}
+  "safety": 2,
+  "config": {},
+  "agentFiles": true
 }
