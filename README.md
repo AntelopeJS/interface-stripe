@@ -96,6 +96,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) before you open a pull request. The lo
 ```bash
 pnpm install
 pnpm lint
+pnpm typecheck
 pnpm build
 ```
 
