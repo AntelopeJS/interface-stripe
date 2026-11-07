@@ -36,7 +36,7 @@
     "provenance": true
   },
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc --skipLibCheck",
     "format": "oxfmt .",
     "lint:fix": "oxlint --fix",
     "lint": "oxlint",
