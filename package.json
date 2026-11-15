@@ -1,6 +1,6 @@
 {
   "name": "@antelopejs/interface-stripe",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "AntelopeJS interface for Stripe payments: payment intents and payment status watchers",
   "keywords": [
     "antelopejs",

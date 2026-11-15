@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.0.8
+
+[compare changes](https://github.com/AntelopeJS/interface-stripe/compare/v0.0.7...v0.0.8)
+
+### 📖 Documentation
+
+- **readme:** Adopt the AntelopeJS framework README style ([#43](https://github.com/AntelopeJS/interface-stripe/pull/43))
+
+### 📦 Build
+
+- **deps:** Move to tooling-configs 0.7.1 and cap @antelopejs ranges below the next minor ([#45](https://github.com/AntelopeJS/interface-stripe/pull/45))
+- Move to @antelopejs/tooling-configs 0.8 and the three-tier CI ([#46](https://github.com/AntelopeJS/interface-stripe/pull/46))
+
+### 🤖 CI
+
+- Run the check jobs on Windows beside Linux ([#44](https://github.com/AntelopeJS/interface-stripe/pull/44))
+
+#### ⚠️ Breaking Changes
+
+- **deps:** Move to tooling-configs 0.7.1 and cap @antelopejs ranges below the next minor ([#45](https://github.com/AntelopeJS/interface-stripe/pull/45))
+
+### ❤️ Contributors
+
+- Antony Rizzitelli
+
 ## v0.0.7
 
 [compare changes](https://github.com/AntelopeJS/interface-stripe/compare/v0.0.6...v0.0.7)
